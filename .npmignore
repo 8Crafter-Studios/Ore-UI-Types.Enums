@@ -1,0 +1,7 @@
+.git
+.github
+.vscode
+.*rc.json
+.*rc
+node_modules
+package-lock.json
