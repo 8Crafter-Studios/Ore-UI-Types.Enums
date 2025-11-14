@@ -6,9 +6,13 @@
         "Ore UI",
         "OreUI",
         "Minecraft",
+        "minecraft",
         "MCBE",
+        "mcbe",
         "Types",
+        "types",
         "Enums",
+        "enums",
         "MC"
     ],
     "homepage": "https://github.com/8Crafter-Studios/Ore-UI-Types.Enums#readme",
@@ -30,12 +34,12 @@
     "main": "index.ts",
     "exports": {
         ".": {
-            "types": "./index.ts",
-            "default": "./index.js"
+            "default": "./index.js",
+            "types": "./index.ts"
         },
         "./ts": {
-            "types": "./index.ts",
-            "default": "./index.ts"
+            "default": "./index.ts",
+            "types": "./index.ts"
         }
     },
     "scripts": {
