@@ -1,5 +1,9 @@
+"use strict";
 // TODO: Switch all the constants to actual enums.
-export const JoinRealmsServerError = {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
+exports.reverseNumericEnumMapping = reverseNumericEnumMapping;
+exports.JoinRealmsServerError = {
     RealmsAPIUnavailable: 0,
     AlreadyMember: 1,
     RealmExpired: 2,
@@ -10,14 +14,14 @@ export const JoinRealmsServerError = {
     UnexpectedServerResponse: 7,
     AnonymousAccount: 8,
 };
-export const LeaveRealmsServerError = {
+exports.LeaveRealmsServerError = {
     RealmsAPIUnavailable: 0,
     ErrorTaskInProgress: 1,
     UnknownError: 2,
     Success: 3,
     Unknown: 4,
 };
-export const ScreenType = {
+exports.ScreenType = {
     TV_SCREEN_TYPE: 0,
     DESKTOP_SCREEN_TYPE: 1,
     HANDHELD_SCREEN_TYPE: 2,
@@ -26,11 +30,11 @@ export const ScreenType = {
      */
     VR_SCREEN_TYPE: 3,
 };
-export const HandheldDeviceType = {
+exports.HandheldDeviceType = {
     PHONE: 0,
     TABLET: 1,
 };
-export const InputMethod = {
+exports.InputMethod = {
     GAMEPAD: 0,
     TOUCH: 1,
     MOUSE: 2,
@@ -40,7 +44,7 @@ export const InputMethod = {
 /**
  * @deprecated This was removed in 1.21.100.21.
  */
-export const ARVRPlatform = {
+exports.ARVRPlatform = {
     ARVR_None: 0,
     ARVR_Rift: 1,
     ARVR_Holographic: 2,
@@ -54,7 +58,7 @@ export const ARVRPlatform = {
  *
  * There a second platform enum export type in-game that includes all the removed entries and unsupported ones too (ex. `Linux`), that one is only used for the world players list facet.
  */
-export const Platform = {
+exports.Platform = {
     IOS: 0,
     GOOGLE: 1,
     AMAZON_HANDHELD: 2,
@@ -67,52 +71,52 @@ export const Platform = {
     NX_TV: 9,
     PS5: 10,
 };
-export const Controller = {
+exports.Controller = {
     XBOX: 0,
     PS: 1,
     STEAM: 2,
     SWITCH: 3,
     QUEST: 4,
 };
-export const KeyboardType = {
+exports.KeyboardType = {
     Standard: 0,
     FullKeyboard: 1,
 };
-export const StorageType = {
+exports.StorageType = {
     NONE: 0,
     EXTERNAL: 1,
     APPDATA: 2,
 };
-export const RealmPlayerRoleEnum = {
+exports.RealmPlayerRoleEnum = {
     NONMEMBER: -1,
     VISITOR: 0,
     MEMBER: 1,
     OPERATOR: 2,
     OWNER: 3,
 };
-export const FriendPresence = {
+exports.FriendPresence = {
     Unknown: 0,
     Online: 1,
     Away: 2,
     Offline: 3,
 };
-export const FriendFavoriteStatus = {
+exports.FriendFavoriteStatus = {
     UNKNOWN: 0,
     FAVORITE: 1,
     NOT_FAVORITE: 2,
 };
-export const RealmsStoriesTimelineOptInStatus = {
+exports.RealmsStoriesTimelineOptInStatus = {
     OptedIn: 0,
     OptedOut: 1,
     None: 2,
 };
-export const PlayerPermissionLevel = {
+exports.PlayerPermissionLevel = {
     Visitor: 0,
     Member: 1,
     Operator: 2,
     Custom: 3,
 };
-export const PlayerRelation = {
+exports.PlayerRelation = {
     Self: 0,
     TwoWayFriend: 1,
     Following: 2,
@@ -133,7 +137,7 @@ export const PlayerRelation = {
 //     NumberEnumToObject<typeof PlayerRelation>,
 //     Mode
 // >;
-export const VanillaGameplayContainerChestType = {
+exports.VanillaGameplayContainerChestType = {
     Chest: 0,
     TrappedChest: 1,
     CopperChest: 2,
@@ -141,14 +145,14 @@ export const VanillaGameplayContainerChestType = {
     EnderChest: 4,
     ShulkerBox: 5,
 };
-export const VanillaGameplayContainerItemType = {
+exports.VanillaGameplayContainerItemType = {
     Normal: 0,
     CreativeRecipe: 1,
     SurvivalRecipe: 2,
     RecipePreview: 3,
     Ghost: 4,
 };
-export const VanillaGameplayUIProfile = {
+exports.VanillaGameplayUIProfile = {
     Classic: 0,
     Pocket: 1,
     None: 2,
@@ -164,7 +168,7 @@ export const VanillaGameplayUIProfile = {
  * reverseNumericEnumMapping({ 0: "a", 1: "b", 2: "c" }); // { a: 0, b: 1, c: 2 }
  * ```
  */
-export function reverseNumericEnumMapping(object) {
+function reverseNumericEnumMapping(object) {
     return Object.fromEntries(Object.entries(object).map(([key, value]) => [value, typeof value === "string" ? Number(key) : key]));
 }
 //# sourceMappingURL=index.js.map

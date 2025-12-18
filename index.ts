@@ -49,7 +49,11 @@ type OmitNeverValueKeys<T extends object> = Omit<T, NeverValueKeys<T>>;
  * @template T The number enum type to convert.
  */
 type NumberEnumToObject<T> = OmitNeverValueKeys<{
-    [K in keyof T as K extends string ? T[K] extends number ? K : never : never]: T[K] extends number ? (`${T[K]}` extends `${infer B extends number}` ? B : never) : never;
+    [K in keyof T as K extends string ? (T[K] extends number ? K : never) : never]: T[K] extends number
+        ? `${T[K]}` extends `${infer B extends number}`
+            ? B
+            : never
+        : never;
 }>;
 
 /**
@@ -81,7 +85,7 @@ export const LeaveRealmsServerError = {
     UnknownError: 2,
     Success: 3,
     Unknown: 4,
-};
+} as const;
 export type LeaveRealmsServerError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
     typeof LeaveRealmsServerError,
     Mode
@@ -96,12 +100,15 @@ export const ScreenType = {
      */
     VR_SCREEN_TYPE: 3,
 } as const;
-export type ScreenType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ScreenType, Mode> & {
-    /**
-     * @deprecated This was removed in 1.21.110.25.
-     */
-    3: unknown;
-};
+export type ScreenType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ScreenType, Mode> &
+    (Mode extends "enum"
+        ? {
+              /**
+               * @deprecated This was removed in 1.21.110.25.
+               */
+              3: unknown;
+          }
+        : unknown);
 
 export const HandheldDeviceType = {
     PHONE: 0,
@@ -167,7 +174,7 @@ export type Controller<Mode extends "enum" | "keys" | "values" = "enum"> = Const
 export const KeyboardType = {
     Standard: 0,
     FullKeyboard: 1,
-};
+} as const;
 export type KeyboardType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof KeyboardType, Mode>;
 
 export const StorageType = {
@@ -191,21 +198,21 @@ export const FriendPresence = {
     Online: 1,
     Away: 2,
     Offline: 3,
-};
+} as const;
 export type FriendPresence<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof FriendPresence, Mode>;
 
 export const FriendFavoriteStatus = {
     UNKNOWN: 0,
     FAVORITE: 1,
     NOT_FAVORITE: 2,
-};
+} as const;
 export type FriendFavoriteStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof FriendFavoriteStatus, Mode>;
 
 export const RealmsStoriesTimelineOptInStatus = {
     OptedIn: 0,
     OptedOut: 1,
     None: 2,
-};
+} as const;
 export type RealmsStoriesTimelineOptInStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
     typeof RealmsStoriesTimelineOptInStatus,
     Mode
@@ -280,3 +287,22 @@ export type VanillaGameplayUIProfile<Mode extends "enum" | "keys" | "values" = "
     typeof VanillaGameplayUIProfile,
     Mode
 >;
+
+/**
+ * Reverses a numeric enum mapping.
+ *
+ * @param object The enum mapping to reverse.
+ * @returns The reversed enum mapping.
+ *
+ * @example
+ * ```ts
+ * reverseNumericEnumMapping({ 0: "a", 1: "b", 2: "c" }); // { a: 0, b: 1, c: 2 }
+ * ```
+ */
+export function reverseNumericEnumMapping<T extends { [key: string]: number } | { [key: number]: string }>(
+    object: T
+): {
+    [K in keyof T as T[K] extends string | number ? T[K] : never]: K;
+} {
+    return Object.fromEntries(Object.entries(object).map(([key, value]) => [value, typeof value === "string" ? Number(key) : key]));
+}

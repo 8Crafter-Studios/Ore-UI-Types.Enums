@@ -39,11 +39,11 @@ export declare const JoinRealmsServerError: {
 };
 export type JoinRealmsServerError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof JoinRealmsServerError, Mode>;
 export declare const LeaveRealmsServerError: {
-    RealmsAPIUnavailable: number;
-    ErrorTaskInProgress: number;
-    UnknownError: number;
-    Success: number;
-    Unknown: number;
+    readonly RealmsAPIUnavailable: 0;
+    readonly ErrorTaskInProgress: 1;
+    readonly UnknownError: 2;
+    readonly Success: 3;
+    readonly Unknown: 4;
 };
 export type LeaveRealmsServerError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof LeaveRealmsServerError, Mode>;
 export declare const ScreenType: {
@@ -55,12 +55,12 @@ export declare const ScreenType: {
      */
     readonly VR_SCREEN_TYPE: 3;
 };
-export type ScreenType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ScreenType, Mode> & {
+export type ScreenType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ScreenType, Mode> & (Mode extends "enum" ? {
     /**
      * @deprecated This was removed in 1.21.110.25.
      */
     3: unknown;
-};
+} : unknown);
 export declare const HandheldDeviceType: {
     readonly PHONE: 0;
     readonly TABLET: 1;
@@ -118,8 +118,8 @@ export declare const Controller: {
 };
 export type Controller<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof Controller, Mode>;
 export declare const KeyboardType: {
-    Standard: number;
-    FullKeyboard: number;
+    readonly Standard: 0;
+    readonly FullKeyboard: 1;
 };
 export type KeyboardType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof KeyboardType, Mode>;
 export declare const StorageType: {
@@ -137,22 +137,22 @@ export declare const RealmPlayerRoleEnum: {
 };
 export type RealmPlayerRoleEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmPlayerRoleEnum, Mode>;
 export declare const FriendPresence: {
-    Unknown: number;
-    Online: number;
-    Away: number;
-    Offline: number;
+    readonly Unknown: 0;
+    readonly Online: 1;
+    readonly Away: 2;
+    readonly Offline: 3;
 };
 export type FriendPresence<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof FriendPresence, Mode>;
 export declare const FriendFavoriteStatus: {
-    UNKNOWN: number;
-    FAVORITE: number;
-    NOT_FAVORITE: number;
+    readonly UNKNOWN: 0;
+    readonly FAVORITE: 1;
+    readonly NOT_FAVORITE: 2;
 };
 export type FriendFavoriteStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof FriendFavoriteStatus, Mode>;
 export declare const RealmsStoriesTimelineOptInStatus: {
-    OptedIn: number;
-    OptedOut: number;
-    None: number;
+    readonly OptedIn: 0;
+    readonly OptedOut: 1;
+    readonly None: 2;
 };
 export type RealmsStoriesTimelineOptInStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsStoriesTimelineOptInStatus, Mode>;
 export declare const PlayerPermissionLevel: {
@@ -194,4 +194,22 @@ export declare const VanillaGameplayUIProfile: {
     readonly None: 2;
 };
 export type VanillaGameplayUIProfile<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof VanillaGameplayUIProfile, Mode>;
+/**
+ * Reverses a numeric enum mapping.
+ *
+ * @param object The enum mapping to reverse.
+ * @returns The reversed enum mapping.
+ *
+ * @example
+ * ```ts
+ * reverseNumericEnumMapping({ 0: "a", 1: "b", 2: "c" }); // { a: 0, b: 1, c: 2 }
+ * ```
+ */
+export declare function reverseNumericEnumMapping<T extends {
+    [key: string]: number;
+} | {
+    [key: number]: string;
+}>(object: T): {
+    [K in keyof T as T[K] extends string | number ? T[K] : never]: K;
+};
 export {};
