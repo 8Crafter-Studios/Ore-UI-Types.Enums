@@ -162,6 +162,28 @@ export const Platform = {
 } as const;
 export type Platform<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof Platform, Mode>;
 
+export const WorldPlayerInfoBindingsPlatform = {
+    GOOGLE: 1,
+    IOS: 2,
+    OSX: 3,
+    AMAZON: 4,
+    GEARVR_DEPRECATED: 5,
+    UWP_GDK_PC: 7,
+    WIN32: 8,
+    DEDICATED: 9,
+    TVOS_DEPRECATED: 10,
+    SONY: 11,
+    NX: 12,
+    XBOX: 13,
+    WINDOWSPHONE_DEPRECATED: 14,
+    LINUX: 15,
+    UNKNOWN: -1,
+} as const;
+export type WorldPlayerInfoBindingsPlatform<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof WorldPlayerInfoBindingsPlatform,
+    Mode
+>;
+
 export const Controller = {
     XBOX: 0,
     PS: 1,

@@ -1,7 +1,7 @@
 "use strict";
 // TODO: Switch all the constants to actual enums.
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
+exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
 exports.reverseNumericEnumMapping = reverseNumericEnumMapping;
 exports.JoinRealmsServerError = {
     RealmsAPIUnavailable: 0,
@@ -70,6 +70,23 @@ exports.Platform = {
     MACOS: 8,
     NX_TV: 9,
     PS5: 10,
+};
+exports.WorldPlayerInfoBindingsPlatform = {
+    GOOGLE: 1,
+    IOS: 2,
+    OSX: 3,
+    AMAZON: 4,
+    GEARVR_DEPRECATED: 5,
+    UWP_GDK_PC: 7,
+    WIN32: 8,
+    DEDICATED: 9,
+    TVOS_DEPRECATED: 10,
+    SONY: 11,
+    NX: 12,
+    XBOX: 13,
+    WINDOWSPHONE_DEPRECATED: 14,
+    LINUX: 15,
+    UNKNOWN: -1,
 };
 exports.Controller = {
     XBOX: 0,

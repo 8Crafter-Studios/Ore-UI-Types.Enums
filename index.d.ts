@@ -109,6 +109,24 @@ export declare const Platform: {
     readonly PS5: 10;
 };
 export type Platform<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof Platform, Mode>;
+export declare const WorldPlayerInfoBindingsPlatform: {
+    readonly GOOGLE: 1;
+    readonly IOS: 2;
+    readonly OSX: 3;
+    readonly AMAZON: 4;
+    readonly GEARVR_DEPRECATED: 5;
+    readonly UWP_GDK_PC: 7;
+    readonly WIN32: 8;
+    readonly DEDICATED: 9;
+    readonly TVOS_DEPRECATED: 10;
+    readonly SONY: 11;
+    readonly NX: 12;
+    readonly XBOX: 13;
+    readonly WINDOWSPHONE_DEPRECATED: 14;
+    readonly LINUX: 15;
+    readonly UNKNOWN: -1;
+};
+export type WorldPlayerInfoBindingsPlatform<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof WorldPlayerInfoBindingsPlatform, Mode>;
 export declare const Controller: {
     readonly XBOX: 0;
     readonly PS: 1;

@@ -1,3 +1,9 @@
+# v1.2.0
+
+## Additions
+
+-   Added the `WorldPlayerInfoBindingsPlatform` enum constant.
+
 # v1.1.0
 
 ## Critical Fixes
