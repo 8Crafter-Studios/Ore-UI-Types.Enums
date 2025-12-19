@@ -127,6 +127,12 @@ export declare const WorldPlayerInfoBindingsPlatform: {
     readonly UNKNOWN: -1;
 };
 export type WorldPlayerInfoBindingsPlatform<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof WorldPlayerInfoBindingsPlatform, Mode>;
+export declare const WorldPlayerInfoBindingsConnectionType: {
+    readonly LAN: 0;
+    readonly PLATFORM: 1;
+    readonly XBOX_LIVE: 2;
+};
+export type WorldPlayerInfoBindingsConnectionType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof WorldPlayerInfoBindingsConnectionType, Mode>;
 export declare const Controller: {
     readonly XBOX: 0;
     readonly PS: 1;
@@ -189,6 +195,18 @@ export declare const PlayerRelation: {
     readonly Unknown: 5;
 };
 export type PlayerRelation<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerRelation, Mode>;
+export declare const PlayerPartyPresence: {
+    readonly NotInParty: 0;
+    readonly InParty: 1;
+    readonly Disconnecting: 2;
+};
+export type PlayerPartyPresence<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerPartyPresence, Mode>;
+export declare const PlayerTitleHistory: {
+    readonly Unknown: 0;
+    readonly NotPlayed: 1;
+    readonly HasPlayed: 2;
+};
+export type PlayerTitleHistory<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerTitleHistory, Mode>;
 export declare const VanillaGameplayContainerChestType: {
     readonly Chest: 0;
     readonly TrappedChest: 1;

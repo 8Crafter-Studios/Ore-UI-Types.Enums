@@ -1,3 +1,12 @@
+# v1.3.0
+
+## Additions
+
+-   Added the following enum constants:
+    -   `WorldPlayerInfoBindingsConnectionType`
+    -   `PlayerPartyPresence`
+    -   `PlayerTitleHistory`
+
 # v1.2.0
 
 ## Additions

@@ -84,6 +84,11 @@ export const WorldPlayerInfoBindingsPlatform = {
     LINUX: 15,
     UNKNOWN: -1,
 };
+export const WorldPlayerInfoBindingsConnectionType = {
+    LAN: 0,
+    PLATFORM: 1,
+    XBOX_LIVE: 2,
+};
 export const Controller = {
     XBOX: 0,
     PS: 1,
@@ -150,6 +155,16 @@ export const PlayerRelation = {
 //     NumberEnumToObject<typeof PlayerRelation>,
 //     Mode
 // >;
+export const PlayerPartyPresence = {
+    NotInParty: 0,
+    InParty: 1,
+    Disconnecting: 2,
+};
+export const PlayerTitleHistory = {
+    Unknown: 0,
+    NotPlayed: 1,
+    HasPlayed: 2,
+};
 export const VanillaGameplayContainerChestType = {
     Chest: 0,
     TrappedChest: 1,

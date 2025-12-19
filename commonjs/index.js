@@ -1,7 +1,7 @@
 "use strict";
 // TODO: Switch all the constants to actual enums.
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
+exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerTitleHistory = exports.PlayerPartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
 exports.reverseNumericEnumMapping = reverseNumericEnumMapping;
 exports.JoinRealmsServerError = {
     RealmsAPIUnavailable: 0,
@@ -88,6 +88,11 @@ exports.WorldPlayerInfoBindingsPlatform = {
     LINUX: 15,
     UNKNOWN: -1,
 };
+exports.WorldPlayerInfoBindingsConnectionType = {
+    LAN: 0,
+    PLATFORM: 1,
+    XBOX_LIVE: 2,
+};
 exports.Controller = {
     XBOX: 0,
     PS: 1,
@@ -154,6 +159,16 @@ exports.PlayerRelation = {
 //     NumberEnumToObject<typeof PlayerRelation>,
 //     Mode
 // >;
+exports.PlayerPartyPresence = {
+    NotInParty: 0,
+    InParty: 1,
+    Disconnecting: 2,
+};
+exports.PlayerTitleHistory = {
+    Unknown: 0,
+    NotPlayed: 1,
+    HasPlayed: 2,
+};
 exports.VanillaGameplayContainerChestType = {
     Chest: 0,
     TrappedChest: 1,
