@@ -1,7 +1,7 @@
 "use strict";
 // TODO: Switch all the constants to actual enums.
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerTitleHistory = exports.PlayerPartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
+exports.WebBrowserFacetLinkType = exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerTitleHistory = exports.PlayerPartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
 exports.reverseNumericEnumMapping = reverseNumericEnumMapping;
 exports.JoinRealmsServerError = {
     RealmsAPIUnavailable: 0,
@@ -188,6 +188,44 @@ exports.VanillaGameplayUIProfile = {
     Classic: 0,
     Pocket: 1,
     None: 2,
+};
+exports.WebBrowserFacetLinkType = {
+    NewWorldCreationFeedbackPage: 0,
+    PlayScreenFeedbackPage: 1,
+    EditWorldScreenFeedbackPage: 2,
+    DeathScreenFeedbackPage: 3,
+    RealmsSafetyPage: 4,
+    BannedHelpPage: 6,
+    ParentPermissionHelpPage: 5,
+    NintendoSwitchTechnicalSupportPage: 7,
+    BuyMinecraftStorePage: 8,
+    XboxPrivacyAndOnlineSafety: 9,
+    XboxAccountProfile: 10,
+    JoinRealmHelpPage: 11,
+    FriendsDrawerFeedbackPage: 12,
+    ServersTabFeedbackPage: 13,
+    PlayerFeedbackMain: 14,
+    PlayerFeedbackIdeas: 15,
+    ProfileFeedbackMain: 16,
+    StartFromTemplateFeedbackPage: 17,
+    RealmsTabFeedbackPage: 18,
+    TermsAndServicePage: 19,
+    PrivacyPolicyPage: 20,
+    PreproductionRealmsGuide: 21,
+    TroubleshootingMultiplayerDisabled: 22,
+    EduAboutAddOns: 23,
+    EduAboutBehaviorPacks: 24,
+    EduAboutResourcePacks: 25,
+    EduAboutCloud: 26,
+    FlatWorldFeedbackPage: 27,
+    SignInCapeTerms: 28,
+    ContactSupport: 29,
+    RealmsCommitWikiLink: 30,
+    OtherStore: 31,
+    IOSStore: 32,
+    AndroidGooglePlay: 33,
+    AndroidAmazonAppStore: 34,
+    XboxOneStore: 35,
 };
 /**
  * Reverses a numeric enum mapping.

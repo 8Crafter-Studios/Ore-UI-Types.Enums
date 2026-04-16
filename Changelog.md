@@ -1,3 +1,10 @@
+# v1.4.0
+
+## Additions
+
+-   Added the following enum constants:
+    -   `WebBrowserFacetLinkType`
+
 # v1.3.0
 
 ## Additions

@@ -334,6 +334,49 @@ export type VanillaGameplayUIProfile<Mode extends "enum" | "keys" | "values" = "
     Mode
 >;
 
+export const WebBrowserFacetLinkType = {
+    NewWorldCreationFeedbackPage: 0,
+    PlayScreenFeedbackPage: 1,
+    EditWorldScreenFeedbackPage: 2,
+    DeathScreenFeedbackPage: 3,
+    RealmsSafetyPage: 4,
+    BannedHelpPage: 6,
+    ParentPermissionHelpPage: 5,
+    NintendoSwitchTechnicalSupportPage: 7,
+    BuyMinecraftStorePage: 8,
+    XboxPrivacyAndOnlineSafety: 9,
+    XboxAccountProfile: 10,
+    JoinRealmHelpPage: 11,
+    FriendsDrawerFeedbackPage: 12,
+    ServersTabFeedbackPage: 13,
+    PlayerFeedbackMain: 14,
+    PlayerFeedbackIdeas: 15,
+    ProfileFeedbackMain: 16,
+    StartFromTemplateFeedbackPage: 17,
+    RealmsTabFeedbackPage: 18,
+    TermsAndServicePage: 19,
+    PrivacyPolicyPage: 20,
+    PreproductionRealmsGuide: 21,
+    TroubleshootingMultiplayerDisabled: 22,
+    EduAboutAddOns: 23,
+    EduAboutBehaviorPacks: 24,
+    EduAboutResourcePacks: 25,
+    EduAboutCloud: 26,
+    FlatWorldFeedbackPage: 27,
+    SignInCapeTerms: 28,
+    ContactSupport: 29,
+    RealmsCommitWikiLink: 30,
+    OtherStore: 31,
+    IOSStore: 32,
+    AndroidGooglePlay: 33,
+    AndroidAmazonAppStore: 34,
+    XboxOneStore: 35,
+} as const;
+export type WebBrowserFacetLinkType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof WebBrowserFacetLinkType,
+    Mode
+>;
+
 /**
  * Reverses a numeric enum mapping.
  *

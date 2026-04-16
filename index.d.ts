@@ -230,6 +230,45 @@ export declare const VanillaGameplayUIProfile: {
     readonly None: 2;
 };
 export type VanillaGameplayUIProfile<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof VanillaGameplayUIProfile, Mode>;
+export declare const WebBrowserFacetLinkType: {
+    readonly NewWorldCreationFeedbackPage: 0;
+    readonly PlayScreenFeedbackPage: 1;
+    readonly EditWorldScreenFeedbackPage: 2;
+    readonly DeathScreenFeedbackPage: 3;
+    readonly RealmsSafetyPage: 4;
+    readonly BannedHelpPage: 6;
+    readonly ParentPermissionHelpPage: 5;
+    readonly NintendoSwitchTechnicalSupportPage: 7;
+    readonly BuyMinecraftStorePage: 8;
+    readonly XboxPrivacyAndOnlineSafety: 9;
+    readonly XboxAccountProfile: 10;
+    readonly JoinRealmHelpPage: 11;
+    readonly FriendsDrawerFeedbackPage: 12;
+    readonly ServersTabFeedbackPage: 13;
+    readonly PlayerFeedbackMain: 14;
+    readonly PlayerFeedbackIdeas: 15;
+    readonly ProfileFeedbackMain: 16;
+    readonly StartFromTemplateFeedbackPage: 17;
+    readonly RealmsTabFeedbackPage: 18;
+    readonly TermsAndServicePage: 19;
+    readonly PrivacyPolicyPage: 20;
+    readonly PreproductionRealmsGuide: 21;
+    readonly TroubleshootingMultiplayerDisabled: 22;
+    readonly EduAboutAddOns: 23;
+    readonly EduAboutBehaviorPacks: 24;
+    readonly EduAboutResourcePacks: 25;
+    readonly EduAboutCloud: 26;
+    readonly FlatWorldFeedbackPage: 27;
+    readonly SignInCapeTerms: 28;
+    readonly ContactSupport: 29;
+    readonly RealmsCommitWikiLink: 30;
+    readonly OtherStore: 31;
+    readonly IOSStore: 32;
+    readonly AndroidGooglePlay: 33;
+    readonly AndroidAmazonAppStore: 34;
+    readonly XboxOneStore: 35;
+};
+export type WebBrowserFacetLinkType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof WebBrowserFacetLinkType, Mode>;
 /**
  * Reverses a numeric enum mapping.
  *
