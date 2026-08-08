@@ -1,7 +1,7 @@
 "use strict";
 // TODO: Switch all the constants to actual enums.
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebBrowserFacetLinkType = exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.PlayerTitleHistory = exports.PlayerPartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
+exports.WebBrowserFacetLinkType = exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.RealmsPermissionRole = exports.RealmsPermissionAction = exports.PlayerTitleHistory = exports.PlayerPartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
 exports.reverseNumericEnumMapping = reverseNumericEnumMapping;
 exports.JoinRealmsServerError = {
     RealmsAPIUnavailable: 0,
@@ -165,6 +165,31 @@ exports.PlayerPartyPresence = {
     Disconnecting: 2,
 };
 exports.PlayerTitleHistory = {
+    Unknown: 0,
+    NotPlayed: 1,
+    HasPlayed: 2,
+};
+exports.RealmsPermissionAction = {
+    ManageWorlds: 0,
+    ManageSettings: 1,
+    ManageMembers: 2,
+    ManageRoles: 3,
+    ManageHubSettings: 4,
+    ManageGameSettings: 5,
+    ManageInviteLinks: 6,
+    ManagePacks: 7,
+    SetPermissions: 8,
+    ManageAdmins: 9,
+    ModerateStories: 10,
+    OpenCloseRealm: 11,
+    ViewAdminLog: 12,
+    EditPacks: 13,
+    ManageSubscription: 14,
+    JoinRealmWhenFull: 15,
+    NotLeaveRealm: 16,
+    InteractWithStories: 17,
+};
+exports.RealmsPermissionRole = {
     Unknown: 0,
     NotPlayed: 1,
     HasPlayed: 2,

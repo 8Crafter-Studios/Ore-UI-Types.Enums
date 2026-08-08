@@ -1,3 +1,11 @@
+# v1.5.0
+
+## Additions
+
+-   Added the following enum constants:
+    -   `RealmsPermissionAction`
+    -   `RealmsPermissionRole`
+
 # v1.4.0
 
 ## Additions

@@ -165,6 +165,31 @@ export const PlayerTitleHistory = {
     NotPlayed: 1,
     HasPlayed: 2,
 };
+export const RealmsPermissionAction = {
+    ManageWorlds: 0,
+    ManageSettings: 1,
+    ManageMembers: 2,
+    ManageRoles: 3,
+    ManageHubSettings: 4,
+    ManageGameSettings: 5,
+    ManageInviteLinks: 6,
+    ManagePacks: 7,
+    SetPermissions: 8,
+    ManageAdmins: 9,
+    ModerateStories: 10,
+    OpenCloseRealm: 11,
+    ViewAdminLog: 12,
+    EditPacks: 13,
+    ManageSubscription: 14,
+    JoinRealmWhenFull: 15,
+    NotLeaveRealm: 16,
+    InteractWithStories: 17,
+};
+export const RealmsPermissionRole = {
+    Unknown: 0,
+    NotPlayed: 1,
+    HasPlayed: 2,
+};
 export const VanillaGameplayContainerChestType = {
     Chest: 0,
     TrappedChest: 1,

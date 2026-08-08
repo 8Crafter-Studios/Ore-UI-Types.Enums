@@ -207,6 +207,33 @@ export declare const PlayerTitleHistory: {
     readonly HasPlayed: 2;
 };
 export type PlayerTitleHistory<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerTitleHistory, Mode>;
+export declare const RealmsPermissionAction: {
+    readonly ManageWorlds: 0;
+    readonly ManageSettings: 1;
+    readonly ManageMembers: 2;
+    readonly ManageRoles: 3;
+    readonly ManageHubSettings: 4;
+    readonly ManageGameSettings: 5;
+    readonly ManageInviteLinks: 6;
+    readonly ManagePacks: 7;
+    readonly SetPermissions: 8;
+    readonly ManageAdmins: 9;
+    readonly ModerateStories: 10;
+    readonly OpenCloseRealm: 11;
+    readonly ViewAdminLog: 12;
+    readonly EditPacks: 13;
+    readonly ManageSubscription: 14;
+    readonly JoinRealmWhenFull: 15;
+    readonly NotLeaveRealm: 16;
+    readonly InteractWithStories: 17;
+};
+export type RealmsPermissionAction<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsPermissionAction, Mode>;
+export declare const RealmsPermissionRole: {
+    readonly Unknown: 0;
+    readonly NotPlayed: 1;
+    readonly HasPlayed: 2;
+};
+export type RealmsPermissionRole<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsPermissionRole, Mode>;
 export declare const VanillaGameplayContainerChestType: {
     readonly Chest: 0;
     readonly TrappedChest: 1;

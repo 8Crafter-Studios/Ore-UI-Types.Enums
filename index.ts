@@ -15,16 +15,15 @@
  * type Values = ConstNumberObjectEnumToEnumMappingType<Original, "values">; // 0 | 1 | 2
  * ```
  */
-type ConstNumberObjectEnumToEnumMappingType<T extends { [key: string]: number }, Mode extends "enum" | "keys" | "values" = "enum"> = Mode extends "enum"
-    ? MergeObjectTypes<
-          {
-              [K in keyof T as T[K]]: K;
-          } & T
-      >
-    : Mode extends "keys"
-    ? keyof T
-    : Mode extends "values"
-    ? T[keyof T]
+type ConstNumberObjectEnumToEnumMappingType<T extends { [key: string]: number }, Mode extends "enum" | "keys" | "values" = "enum"> =
+    Mode extends "enum" ?
+        MergeObjectTypes<
+            {
+                [K in keyof T as T[K]]: K;
+            } & T
+        >
+    : Mode extends "keys" ? keyof T
+    : Mode extends "values" ? T[keyof T]
     : never;
 
 /**
@@ -49,11 +48,15 @@ type OmitNeverValueKeys<T extends object> = Omit<T, NeverValueKeys<T>>;
  * @template T The number enum type to convert.
  */
 type NumberEnumToObject<T> = OmitNeverValueKeys<{
-    [K in keyof T as K extends string ? (T[K] extends number ? K : never) : never]: T[K] extends number
-        ? `${T[K]}` extends `${infer B extends number}`
-            ? B
-            : never
-        : never;
+    [K in keyof T as K extends string ?
+        T[K] extends number ?
+            K
+        :   never
+    :   never]: T[K] extends number ?
+        `${T[K]}` extends `${infer B extends number}` ?
+            B
+        :   never
+    :   never;
 }>;
 
 /**
@@ -101,14 +104,14 @@ export const ScreenType = {
     VR_SCREEN_TYPE: 3,
 } as const;
 export type ScreenType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ScreenType, Mode> &
-    (Mode extends "enum"
-        ? {
-              /**
-               * @deprecated This was removed in 1.21.110.25.
-               */
-              3: unknown;
-          }
-        : unknown);
+    (Mode extends "enum" ?
+        {
+            /**
+             * @deprecated This was removed in 1.21.110.25.
+             */
+            3: unknown;
+        }
+    :   unknown);
 
 export const HandheldDeviceType = {
     PHONE: 0,
@@ -298,6 +301,38 @@ export const PlayerTitleHistory = {
     HasPlayed: 2,
 } as const;
 export type PlayerTitleHistory<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerTitleHistory, Mode>;
+
+export const RealmsPermissionAction = {
+    ManageWorlds: 0,
+    ManageSettings: 1,
+    ManageMembers: 2,
+    ManageRoles: 3,
+    ManageHubSettings: 4,
+    ManageGameSettings: 5,
+    ManageInviteLinks: 6,
+    ManagePacks: 7,
+    SetPermissions: 8,
+    ManageAdmins: 9,
+    ModerateStories: 10,
+    OpenCloseRealm: 11,
+    ViewAdminLog: 12,
+    EditPacks: 13,
+    ManageSubscription: 14,
+    JoinRealmWhenFull: 15,
+    NotLeaveRealm: 16,
+    InteractWithStories: 17,
+} as const;
+export type RealmsPermissionAction<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof RealmsPermissionAction,
+    Mode
+>;
+
+export const RealmsPermissionRole = {
+    Unknown: 0,
+    NotPlayed: 1,
+    HasPlayed: 2,
+} as const;
+export type RealmsPermissionRole<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsPermissionRole, Mode>;
 
 export const VanillaGameplayContainerChestType = {
     Chest: 0,
