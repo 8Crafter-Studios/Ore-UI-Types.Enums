@@ -1,3 +1,9 @@
+# v1.5.1
+
+## Fixes
+
+-   Fixed the `RealmsPermissionRole` enum constant.
+
 # v1.5.0
 
 ## Additions

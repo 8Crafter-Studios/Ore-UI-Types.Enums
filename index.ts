@@ -328,9 +328,9 @@ export type RealmsPermissionAction<Mode extends "enum" | "keys" | "values" = "en
 >;
 
 export const RealmsPermissionRole = {
-    Unknown: 0,
-    NotPlayed: 1,
-    HasPlayed: 2,
+    Player: 0,
+    Admin: 1,
+    Owner: 2,
 } as const;
 export type RealmsPermissionRole<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsPermissionRole, Mode>;
 

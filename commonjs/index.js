@@ -190,9 +190,9 @@ exports.RealmsPermissionAction = {
     InteractWithStories: 17,
 };
 exports.RealmsPermissionRole = {
-    Unknown: 0,
-    NotPlayed: 1,
-    HasPlayed: 2,
+    Player: 0,
+    Admin: 1,
+    Owner: 2,
 };
 exports.VanillaGameplayContainerChestType = {
     Chest: 0,

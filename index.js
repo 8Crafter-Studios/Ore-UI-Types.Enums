@@ -186,9 +186,9 @@ export const RealmsPermissionAction = {
     InteractWithStories: 17,
 };
 export const RealmsPermissionRole = {
-    Unknown: 0,
-    NotPlayed: 1,
-    HasPlayed: 2,
+    Player: 0,
+    Admin: 1,
+    Owner: 2,
 };
 export const VanillaGameplayContainerChestType = {
     Chest: 0,

@@ -229,9 +229,9 @@ export declare const RealmsPermissionAction: {
 };
 export type RealmsPermissionAction<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsPermissionAction, Mode>;
 export declare const RealmsPermissionRole: {
-    readonly Unknown: 0;
-    readonly NotPlayed: 1;
-    readonly HasPlayed: 2;
+    readonly Player: 0;
+    readonly Admin: 1;
+    readonly Owner: 2;
 };
 export type RealmsPermissionRole<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsPermissionRole, Mode>;
 export declare const VanillaGameplayContainerChestType: {
