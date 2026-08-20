@@ -1,7 +1,7 @@
 "use strict";
 // TODO: Switch all the constants to actual enums.
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.WebBrowserFacetLinkType = exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.RealmsPermissionRole = exports.RealmsPermissionAction = exports.PlayerTitleHistory = exports.PlayerPartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
+exports.WebBrowserFacetLinkType = exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.RealmsPermissionRole = exports.RealmsPermissionAction = exports.PlayerTitleHistory = exports.PlayerPartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FriendFavoriteStatus = exports.FriendPresence = exports.RealmsPlayerListPlayerPermission = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
 exports.reverseNumericEnumMapping = reverseNumericEnumMapping;
 exports.JoinRealmsServerError = {
     RealmsAPIUnavailable: 0,
@@ -115,6 +115,13 @@ exports.RealmPlayerRoleEnum = {
     MEMBER: 1,
     OPERATOR: 2,
     OWNER: 3,
+};
+exports.RealmsPlayerListPlayerPermission = {
+    NONMEMBER: 0,
+    VISITOR: 1,
+    MEMBER: 2,
+    OPERATOR: 3,
+    OWNER: 4,
 };
 exports.FriendPresence = {
     Unknown: 0,

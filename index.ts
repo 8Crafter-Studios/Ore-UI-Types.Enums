@@ -228,6 +228,18 @@ export const RealmPlayerRoleEnum = {
 } as const;
 export type RealmPlayerRoleEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmPlayerRoleEnum, Mode>;
 
+export const RealmsPlayerListPlayerPermission = {
+    NONMEMBER: 0,
+    VISITOR: 1,
+    MEMBER: 2,
+    OPERATOR: 3,
+    OWNER: 4,
+} as const;
+export type RealmsPlayerListPlayerPermission<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof RealmsPlayerListPlayerPermission,
+    Mode
+>;
+
 export const FriendPresence = {
     Unknown: 0,
     Online: 1,

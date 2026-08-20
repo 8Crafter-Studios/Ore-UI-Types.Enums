@@ -112,6 +112,13 @@ export const RealmPlayerRoleEnum = {
     OPERATOR: 2,
     OWNER: 3,
 };
+export const RealmsPlayerListPlayerPermission = {
+    NONMEMBER: 0,
+    VISITOR: 1,
+    MEMBER: 2,
+    OPERATOR: 3,
+    OWNER: 4,
+};
 export const FriendPresence = {
     Unknown: 0,
     Online: 1,

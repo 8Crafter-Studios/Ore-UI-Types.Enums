@@ -1,3 +1,10 @@
+# v1.6.0
+
+## Additions
+
+-   Added the following enum constants:
+    -   `RealmsPlayerListPlayerPermission`
+
 # v1.5.1
 
 ## Fixes

@@ -160,6 +160,14 @@ export declare const RealmPlayerRoleEnum: {
     readonly OWNER: 3;
 };
 export type RealmPlayerRoleEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmPlayerRoleEnum, Mode>;
+export declare const RealmsPlayerListPlayerPermission: {
+    readonly NONMEMBER: 0;
+    readonly VISITOR: 1;
+    readonly MEMBER: 2;
+    readonly OPERATOR: 3;
+    readonly OWNER: 4;
+};
+export type RealmsPlayerListPlayerPermission<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmsPlayerListPlayerPermission, Mode>;
 export declare const FriendPresence: {
     readonly Unknown: 0;
     readonly Online: 1;
