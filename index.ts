@@ -631,6 +631,266 @@ export type DownloadWorldTemplateError<Mode extends "enum" | "keys" | "values" =
     Mode
 >;
 
+export const ThirdPartyServersStatus = {
+    ServersSupported: 0,
+    Win32DevBuildWarning: 1,
+} as const;
+export type ThirdPartyServersStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof ThirdPartyServersStatus,
+    Mode
+>;
+
+export const SettingsActionType = {
+    ExternalLink: 0,
+} as const;
+export type SettingsActionType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof SettingsActionType, Mode>;
+
+export const SettingsComponentState = {
+    Enabled: 0,
+    Disabled: 1,
+    Hidden: 2,
+} as const;
+export type SettingsComponentState<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof SettingsComponentState,
+    Mode
+>;
+
+export const SettingsType = {
+    Number: 0,
+    Boolean: 1,
+    String: 2,
+    Option: 3,
+    Action: 4,
+    Text: 5,
+    GroupInfo: 6,
+} as const;
+export type SettingsType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof SettingsType, Mode>;
+
+export const DifficultyEnum = {
+    PEACEFUL: 0,
+    EASY: 1,
+    NORMAL: 2,
+    HARD: 3,
+} as const;
+export type DifficultyEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof DifficultyEnum, Mode>;
+
+export const PlayerAccess = {
+    INVITED: 1,
+    FRIENDS: 2,
+    FRIENDS_OF_FRIENDS: 3,
+} as const;
+export type PlayerAccess<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerAccess, Mode>;
+
+export const PlayerPermissions = {
+    VISITOR: 0,
+    MEMBER: 1,
+    OPERATOR: 2,
+} as const;
+export type PlayerPermissions<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerPermissions, Mode>;
+
+export const GeneralMultiplayerWarningStateEnum = {
+    NONE: 0,
+    CHECK_INTERNET_CONNECTION: 1,
+    DISCONNECTED_THIRD_PARTY_WITH_SUBSCRIPTION: 2,
+    DISCONNECTED_THIRD_PARTY: 3,
+    LOCAL_MULTIPLAYER_PRIVILEGES_BLOCKED_THIRD_PARTY: 4,
+    MULTIPLAYER_PRIVILEGES_BLOCKED_THIRD_PARTY: 5,
+    MULTIPLAYER_PRIVILEGES_BLOCKED: 6,
+    MULTIPLAYER_PRIVILEGES_BLOCKED_ON_CONSOLE: 7,
+    CROSS_PLATFORM_DISABLED: 8,
+    NON_MULTIPLAYER_SKIN_EQUIPPED: 9,
+} as const;
+export type GeneralMultiplayerWarningStateEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof GeneralMultiplayerWarningStateEnum,
+    Mode
+>;
+
+export const DaylightCycleEnum = {
+    NORMAL: 0,
+    ALWAYS_DAY: 1,
+    LOCK_TIME: 2,
+} as const;
+export type DaylightCycleEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof DaylightCycleEnum, Mode>;
+
+export const ExperimentalFeatureCategory = {
+    GAMEPLAY: 0,
+    GRAPHICS: 1,
+    ADD_ON_CREATORS: 2,
+    INTERNAL_TESTS: 3,
+} as const;
+export type ExperimentalFeatureCategory<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof ExperimentalFeatureCategory,
+    Mode
+>;
+
+export const ReadWorldError = {
+    IncorrectWorldId: 0,
+    UnexpectedError: 1,
+} as const;
+export type ReadWorldError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ReadWorldError, Mode>;
+
+export const GeneratorType = {
+    Legacy: 0,
+    Overworld: 1,
+    Flat: 2,
+    Nether: 3,
+    TheEnd: 4,
+    Void: 5,
+    Undefined: 6,
+} as const;
+export type GeneratorType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof GeneratorType, Mode>;
+
+export const WriteWorldError = {
+    IncorrectWorldId: 0,
+    UnableToCreateWorldDirectoryPath: 1,
+    UnableToCreateResourcePackDirectoryPath: 2,
+    UnableToCreateBehaviorDirectoryPath: 3,
+    InsufficientDiskSpace: 4,
+    UnknownError: 5,
+} as const;
+export type WriteWorldError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof WriteWorldError, Mode>;
+
+export const GameMode = {
+    UNKNOWN: -1,
+    SURVIVAL: 0,
+    CREATIVE: 1,
+    ADVENTURE: 2,
+    DEFAULT: 5,
+    SPECTATOR: 6,
+} as const;
+export type GameMode<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof GameMode, Mode>;
+
+export const JoinServerWorldResult = {
+    OK: 0,
+    InvalidServerIdError: 1,
+    InvalidUserError: 2,
+    NoInternetError: 3,
+    UserNeedsToBeSignedInError: 4,
+    BlockedByPlatformError: 5,
+    BlockedByXBLError: 6,
+    BlockedByVersionError: 7,
+    UserBannedError: 8,
+    ThirdPartyBadIPError: 9,
+    ThirdPartyNoServerOrServerLockedError: 10,
+    UnknownError: 11,
+} as const;
+export type JoinServerWorldResult<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof JoinServerWorldResult,
+    Mode
+>;
+
+export const JoinRealmWorldResult = {
+    Ok: 0,
+    JoinRealmAlreadyInProgress: 1,
+    RealmIDConversionFailed: 2,
+    MissingPlatformMembership: 3,
+    MultiplayerPrivilegeBlocked: 4,
+    RealmsNotInitialized: 5,
+    MobileDataBlockedAndNoWifi: 6,
+    InvalidCrossPlatformMultiplayerSkin: 7,
+    RealmsApiNotAvailable: 8,
+    UnassignedDevVersion: 9,
+    MemberOfTooManyRealms: 10,
+    CannotConnectToRealm: 11,
+    UnknownError: 12,
+    TimelineRequired: 13,
+} as const;
+export type JoinRealmWorldResult<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof JoinRealmWorldResult, Mode>;
+
+export const RealmConnectionFlow = {
+    PlayScreen: 0,
+    SettingsScreen: 1,
+    InviteLink: 2,
+    AllowList: 3,
+    Marketplace: 4,
+    CreateScreen: 5,
+    SlotsScreen: 6,
+    ConnectToRealmLink: 7,
+    EditWorld: 8,
+    TimelineRequiredScreen: 9,
+} as const;
+export type RealmConnectionFlow<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmConnectionFlow, Mode>;
+
+export const PlayerMessagingServiceFacetStatus = {
+    LOADING: 0,
+    IMAGE_RETRIEVAL: 1,
+    LOADED: 2,
+} as const;
+export type PlayerMessagingServiceFacetStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof PlayerMessagingServiceFacetStatus,
+    Mode
+>;
+
+export const PlayerPermissionsAbility = {
+    Build: 0,
+    Mine: 1,
+    DoorsAndSwitches: 2,
+    OpenContainers: 3,
+    AttackPlayers: 4,
+    AttackMobs: 5,
+    OperatorCommands: 6,
+    Teleport: 7,
+} as const;
+export type PlayerPermissionsAbility<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof PlayerPermissionsAbility,
+    Mode
+>;
+
+export const PlayerPermissionsError = {
+    InvalidPlayerId: 0,
+    MissingPlayerPermissions: 1,
+    SelectedPlayerLeftWorld: 2,
+    SelectedPlayerPermissionsChanged: 3,
+    OperatorCommandsPermissionRevoked: 4,
+    KickCommandFailed: 5,
+    OK: 6,
+} as const;
+export type PlayerPermissionsError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof PlayerPermissionsError,
+    Mode
+>;
+
+export const StartLocalWorldResult = {
+    Ok: 0,
+    WorldNotInLevelList: 1,
+    StartupAlreadyInProgress: 2,
+    GameServerStarterNotReady: 3,
+    MissingDependencies: 4,
+    DlcMissingContentKey: 5,
+    DlcPendingImports: 6,
+    HasUnownedPacks: 7,
+    UnknownError: 8,
+    WorldSavedInNewerVersion: 9,
+    RealmsPlusEnded: 10,
+} as const;
+export type StartLocalWorldResult<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof StartLocalWorldResult,
+    Mode
+>;
+
+export const AddedFriendLocation = {
+    ADDFRIENDS_RECOMMENDEDFRIENDS: 0,
+    ADDFRIENDS_RECENTLYPLAYEDWITH: 1,
+    ADDFRIENDS_FOLLOWERS: 2,
+    ADDFRIENDS_SEARCH: 3,
+    PROFILE_MAIN: 4,
+    JSONUI: 5,
+    PROFILE_FRIENDSLIST: 6,
+    PROFILE_FOLLOWERSLIST: 7,
+    SOCIALDRAWER_OPENPARTY: 8,
+} as const;
+export type AddedFriendLocation<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof AddedFriendLocation, Mode>;
+
+export const PlayerPermissionsActionState = {
+    Success: 0,
+    Error: 1,
+    Idle: 2,
+} as const;
+export type PlayerPermissionsActionState<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof PlayerPermissionsActionState,
+    Mode
+>;
+
 /**
  * Reverses a numeric enum mapping.
  *

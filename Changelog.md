@@ -1,3 +1,32 @@
+# v1.8.0
+
+## Additions
+
+-   Added the following enum constants:
+    -   `ThirdPartyServersStatus`
+    -   `SettingsActionType`
+    -   `SettingsComponentState`
+    -   `SettingsType`
+    -   `DifficultyEnum`
+    -   `PlayerAccess`
+    -   `PlayerPermissions`
+    -   `GeneralMultiplayerWarningStateEnum`
+    -   `DaylightCycleEnum`
+    -   `ExperimentalFeatureCategory`
+    -   `ReadWorldError`
+    -   `GeneratorType`
+    -   `WriteWorldError`
+    -   `GameMode`
+    -   `JoinServerWorldResult`
+    -   `JoinRealmWorldResult`
+    -   `RealmConnectionFlow`
+    -   `PlayerMessagingServiceFacetStatus`
+    -   `PlayerPermissionsAbility`
+    -   `PlayerPermissionsError`
+    -   `StartLocalWorldResult`
+    -   `AddedFriendLocation`
+    -   `PlayerPermissionsActionState`
+
 # v1.7.0
 
 ## Breaking Changes

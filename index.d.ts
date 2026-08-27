@@ -481,6 +481,213 @@ export declare const DownloadWorldTemplateError: {
     readonly InsufficientStorage: 5;
 };
 export type DownloadWorldTemplateError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof DownloadWorldTemplateError, Mode>;
+export declare const ThirdPartyServersStatus: {
+    readonly ServersSupported: 0;
+    readonly Win32DevBuildWarning: 1;
+};
+export type ThirdPartyServersStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ThirdPartyServersStatus, Mode>;
+export declare const SettingsActionType: {
+    readonly ExternalLink: 0;
+};
+export type SettingsActionType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof SettingsActionType, Mode>;
+export declare const SettingsComponentState: {
+    readonly Enabled: 0;
+    readonly Disabled: 1;
+    readonly Hidden: 2;
+};
+export type SettingsComponentState<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof SettingsComponentState, Mode>;
+export declare const SettingsType: {
+    readonly Number: 0;
+    readonly Boolean: 1;
+    readonly String: 2;
+    readonly Option: 3;
+    readonly Action: 4;
+    readonly Text: 5;
+    readonly GroupInfo: 6;
+};
+export type SettingsType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof SettingsType, Mode>;
+export declare const DifficultyEnum: {
+    readonly PEACEFUL: 0;
+    readonly EASY: 1;
+    readonly NORMAL: 2;
+    readonly HARD: 3;
+};
+export type DifficultyEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof DifficultyEnum, Mode>;
+export declare const PlayerAccess: {
+    readonly INVITED: 1;
+    readonly FRIENDS: 2;
+    readonly FRIENDS_OF_FRIENDS: 3;
+};
+export type PlayerAccess<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerAccess, Mode>;
+export declare const PlayerPermissions: {
+    readonly VISITOR: 0;
+    readonly MEMBER: 1;
+    readonly OPERATOR: 2;
+};
+export type PlayerPermissions<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerPermissions, Mode>;
+export declare const GeneralMultiplayerWarningStateEnum: {
+    readonly NONE: 0;
+    readonly CHECK_INTERNET_CONNECTION: 1;
+    readonly DISCONNECTED_THIRD_PARTY_WITH_SUBSCRIPTION: 2;
+    readonly DISCONNECTED_THIRD_PARTY: 3;
+    readonly LOCAL_MULTIPLAYER_PRIVILEGES_BLOCKED_THIRD_PARTY: 4;
+    readonly MULTIPLAYER_PRIVILEGES_BLOCKED_THIRD_PARTY: 5;
+    readonly MULTIPLAYER_PRIVILEGES_BLOCKED: 6;
+    readonly MULTIPLAYER_PRIVILEGES_BLOCKED_ON_CONSOLE: 7;
+    readonly CROSS_PLATFORM_DISABLED: 8;
+    readonly NON_MULTIPLAYER_SKIN_EQUIPPED: 9;
+};
+export type GeneralMultiplayerWarningStateEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof GeneralMultiplayerWarningStateEnum, Mode>;
+export declare const DaylightCycleEnum: {
+    readonly NORMAL: 0;
+    readonly ALWAYS_DAY: 1;
+    readonly LOCK_TIME: 2;
+};
+export type DaylightCycleEnum<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof DaylightCycleEnum, Mode>;
+export declare const ExperimentalFeatureCategory: {
+    readonly GAMEPLAY: 0;
+    readonly GRAPHICS: 1;
+    readonly ADD_ON_CREATORS: 2;
+    readonly INTERNAL_TESTS: 3;
+};
+export type ExperimentalFeatureCategory<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ExperimentalFeatureCategory, Mode>;
+export declare const ReadWorldError: {
+    readonly IncorrectWorldId: 0;
+    readonly UnexpectedError: 1;
+};
+export type ReadWorldError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof ReadWorldError, Mode>;
+export declare const GeneratorType: {
+    readonly Legacy: 0;
+    readonly Overworld: 1;
+    readonly Flat: 2;
+    readonly Nether: 3;
+    readonly TheEnd: 4;
+    readonly Void: 5;
+    readonly Undefined: 6;
+};
+export type GeneratorType<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof GeneratorType, Mode>;
+export declare const WriteWorldError: {
+    readonly IncorrectWorldId: 0;
+    readonly UnableToCreateWorldDirectoryPath: 1;
+    readonly UnableToCreateResourcePackDirectoryPath: 2;
+    readonly UnableToCreateBehaviorDirectoryPath: 3;
+    readonly InsufficientDiskSpace: 4;
+    readonly UnknownError: 5;
+};
+export type WriteWorldError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof WriteWorldError, Mode>;
+export declare const GameMode: {
+    readonly UNKNOWN: -1;
+    readonly SURVIVAL: 0;
+    readonly CREATIVE: 1;
+    readonly ADVENTURE: 2;
+    readonly DEFAULT: 5;
+    readonly SPECTATOR: 6;
+};
+export type GameMode<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof GameMode, Mode>;
+export declare const JoinServerWorldResult: {
+    readonly OK: 0;
+    readonly InvalidServerIdError: 1;
+    readonly InvalidUserError: 2;
+    readonly NoInternetError: 3;
+    readonly UserNeedsToBeSignedInError: 4;
+    readonly BlockedByPlatformError: 5;
+    readonly BlockedByXBLError: 6;
+    readonly BlockedByVersionError: 7;
+    readonly UserBannedError: 8;
+    readonly ThirdPartyBadIPError: 9;
+    readonly ThirdPartyNoServerOrServerLockedError: 10;
+    readonly UnknownError: 11;
+};
+export type JoinServerWorldResult<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof JoinServerWorldResult, Mode>;
+export declare const JoinRealmWorldResult: {
+    readonly Ok: 0;
+    readonly JoinRealmAlreadyInProgress: 1;
+    readonly RealmIDConversionFailed: 2;
+    readonly MissingPlatformMembership: 3;
+    readonly MultiplayerPrivilegeBlocked: 4;
+    readonly RealmsNotInitialized: 5;
+    readonly MobileDataBlockedAndNoWifi: 6;
+    readonly InvalidCrossPlatformMultiplayerSkin: 7;
+    readonly RealmsApiNotAvailable: 8;
+    readonly UnassignedDevVersion: 9;
+    readonly MemberOfTooManyRealms: 10;
+    readonly CannotConnectToRealm: 11;
+    readonly UnknownError: 12;
+    readonly TimelineRequired: 13;
+};
+export type JoinRealmWorldResult<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof JoinRealmWorldResult, Mode>;
+export declare const RealmConnectionFlow: {
+    readonly PlayScreen: 0;
+    readonly SettingsScreen: 1;
+    readonly InviteLink: 2;
+    readonly AllowList: 3;
+    readonly Marketplace: 4;
+    readonly CreateScreen: 5;
+    readonly SlotsScreen: 6;
+    readonly ConnectToRealmLink: 7;
+    readonly EditWorld: 8;
+    readonly TimelineRequiredScreen: 9;
+};
+export type RealmConnectionFlow<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof RealmConnectionFlow, Mode>;
+export declare const PlayerMessagingServiceFacetStatus: {
+    readonly LOADING: 0;
+    readonly IMAGE_RETRIEVAL: 1;
+    readonly LOADED: 2;
+};
+export type PlayerMessagingServiceFacetStatus<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerMessagingServiceFacetStatus, Mode>;
+export declare const PlayerPermissionsAbility: {
+    readonly Build: 0;
+    readonly Mine: 1;
+    readonly DoorsAndSwitches: 2;
+    readonly OpenContainers: 3;
+    readonly AttackPlayers: 4;
+    readonly AttackMobs: 5;
+    readonly OperatorCommands: 6;
+    readonly Teleport: 7;
+};
+export type PlayerPermissionsAbility<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerPermissionsAbility, Mode>;
+export declare const PlayerPermissionsError: {
+    readonly InvalidPlayerId: 0;
+    readonly MissingPlayerPermissions: 1;
+    readonly SelectedPlayerLeftWorld: 2;
+    readonly SelectedPlayerPermissionsChanged: 3;
+    readonly OperatorCommandsPermissionRevoked: 4;
+    readonly KickCommandFailed: 5;
+    readonly OK: 6;
+};
+export type PlayerPermissionsError<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerPermissionsError, Mode>;
+export declare const StartLocalWorldResult: {
+    readonly Ok: 0;
+    readonly WorldNotInLevelList: 1;
+    readonly StartupAlreadyInProgress: 2;
+    readonly GameServerStarterNotReady: 3;
+    readonly MissingDependencies: 4;
+    readonly DlcMissingContentKey: 5;
+    readonly DlcPendingImports: 6;
+    readonly HasUnownedPacks: 7;
+    readonly UnknownError: 8;
+    readonly WorldSavedInNewerVersion: 9;
+    readonly RealmsPlusEnded: 10;
+};
+export type StartLocalWorldResult<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof StartLocalWorldResult, Mode>;
+export declare const AddedFriendLocation: {
+    readonly ADDFRIENDS_RECOMMENDEDFRIENDS: 0;
+    readonly ADDFRIENDS_RECENTLYPLAYEDWITH: 1;
+    readonly ADDFRIENDS_FOLLOWERS: 2;
+    readonly ADDFRIENDS_SEARCH: 3;
+    readonly PROFILE_MAIN: 4;
+    readonly JSONUI: 5;
+    readonly PROFILE_FRIENDSLIST: 6;
+    readonly PROFILE_FOLLOWERSLIST: 7;
+    readonly SOCIALDRAWER_OPENPARTY: 8;
+};
+export type AddedFriendLocation<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof AddedFriendLocation, Mode>;
+export declare const PlayerPermissionsActionState: {
+    readonly Success: 0;
+    readonly Error: 1;
+    readonly Idle: 2;
+};
+export type PlayerPermissionsActionState<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof PlayerPermissionsActionState, Mode>;
 /**
  * Reverses a numeric enum mapping.
  *
