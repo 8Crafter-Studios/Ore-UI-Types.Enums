@@ -1,3 +1,11 @@
+# v1.9.0
+
+## Additions
+
+-   Added the following enum constants:'
+    -   `VRMode`
+    -   `ProfanityFilterContext`
+
 # v1.8.0
 
 ## Additions

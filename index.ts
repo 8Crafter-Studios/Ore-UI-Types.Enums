@@ -892,6 +892,36 @@ export type PlayerPermissionsActionState<Mode extends "enum" | "keys" | "values"
 >;
 
 /**
+ * @deprecated This was removed in a 1.21.80 preview.
+ * @todo Figure out what 1.21.80 preview this was removed in.
+ */
+export const VRMode = {
+    NoVR: 0,
+    VRFull3DWorld: 1,
+    VRVirtual2DScreen: 2,
+} as const;
+/**
+ * @deprecated This was removed in a 1.21.80 preview.
+ * @todo Figure out what 1.21.80 preview this was removed in.
+ */
+export type VRMode<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<typeof VRMode, Mode>;
+
+export const ProfanityFilterContext = {
+    NONE: 0,
+    UI_FRONT_END: 1,
+    UI_IN_GAME: 2,
+    ALL_UI: 3,
+    IN_GAME_CHAT: 4,
+    IN_GAME_ITEMS: 8,
+    IN_GAME_NAME: 16,
+    ALL: 31,
+} as const;
+export type ProfanityFilterContext<Mode extends "enum" | "keys" | "values" = "enum"> = ConstNumberObjectEnumToEnumMappingType<
+    typeof ProfanityFilterContext,
+    Mode
+>;
+
+/**
  * Reverses a numeric enum mapping.
  *
  * @param object The enum mapping to reverse.

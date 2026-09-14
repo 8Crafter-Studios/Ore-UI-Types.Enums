@@ -2,7 +2,7 @@
 // TODO: Switch all the constants to actual enums.
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SettingsActionType = exports.ThirdPartyServersStatus = exports.DownloadWorldTemplateError = exports.ImportFailure = exports.DownloadWorldTemplateStatus = exports.WorldSizeConvertResult = exports.StartClearPlayerDataError = exports.ExportWorldStatus = exports.ClearPlayerDataType = exports.ExportWorldResult = exports.ExportWorldFlags = exports.DuplicateWorldError = exports.FacetTaskState = exports.InvocationResult = exports.InvocationState = exports.WorldCloudSyncResult = exports.FriendsLoadingState = exports.ProfileImageState = exports.WorldPingStatus = exports.NetworkWorldType = exports.DeletionStatus = exports.PostStatus = exports.FetchStatus = exports.WebBrowserLink = exports.VanillaGameplayUIProfile = exports.VanillaGameplayContainerItemType = exports.VanillaGameplayContainerChestType = exports.RealmsPermissionRole = exports.RealmsPermissionAction = exports.PlayerTitleHistory = exports.PartyPresence = exports.PlayerRelation = exports.PlayerPermissionLevel = exports.RealmsStoriesTimelineOptInStatus = exports.FavoriteStatusEnum = exports.SocialPresence = exports.RealmsPlayerListPlayerPermission = exports.RealmPlayerRoleEnum = exports.StorageType = exports.KeyboardType = exports.Controller = exports.WorldPlayerInfoBindingsConnectionType = exports.WorldPlayerInfoBindingsPlatform = exports.Platform = exports.ARVRPlatform = exports.InputMethod = exports.HandheldDeviceType = exports.ScreenType = exports.LeaveRealmsServerError = exports.JoinRealmsServerError = void 0;
-exports.PlayerPermissionsActionState = exports.AddedFriendLocation = exports.StartLocalWorldResult = exports.PlayerPermissionsError = exports.PlayerPermissionsAbility = exports.PlayerMessagingServiceFacetStatus = exports.RealmConnectionFlow = exports.JoinRealmWorldResult = exports.JoinServerWorldResult = exports.GameMode = exports.WriteWorldError = exports.GeneratorType = exports.ReadWorldError = exports.ExperimentalFeatureCategory = exports.DaylightCycleEnum = exports.GeneralMultiplayerWarningStateEnum = exports.PlayerPermissions = exports.PlayerAccess = exports.DifficultyEnum = exports.SettingsType = exports.SettingsComponentState = void 0;
+exports.ProfanityFilterContext = exports.VRMode = exports.PlayerPermissionsActionState = exports.AddedFriendLocation = exports.StartLocalWorldResult = exports.PlayerPermissionsError = exports.PlayerPermissionsAbility = exports.PlayerMessagingServiceFacetStatus = exports.RealmConnectionFlow = exports.JoinRealmWorldResult = exports.JoinServerWorldResult = exports.GameMode = exports.WriteWorldError = exports.GeneratorType = exports.ReadWorldError = exports.ExperimentalFeatureCategory = exports.DaylightCycleEnum = exports.GeneralMultiplayerWarningStateEnum = exports.PlayerPermissions = exports.PlayerAccess = exports.DifficultyEnum = exports.SettingsType = exports.SettingsComponentState = void 0;
 exports.reverseNumericEnumMapping = reverseNumericEnumMapping;
 exports.JoinRealmsServerError = {
     RealmsAPIUnavailable: 0,
@@ -599,6 +599,25 @@ exports.PlayerPermissionsActionState = {
     Success: 0,
     Error: 1,
     Idle: 2,
+};
+/**
+ * @deprecated This was removed in a 1.21.80 preview.
+ * @todo Figure out what 1.21.80 preview this was removed in.
+ */
+exports.VRMode = {
+    NoVR: 0,
+    VRFull3DWorld: 1,
+    VRVirtual2DScreen: 2,
+};
+exports.ProfanityFilterContext = {
+    NONE: 0,
+    UI_FRONT_END: 1,
+    UI_IN_GAME: 2,
+    ALL_UI: 3,
+    IN_GAME_CHAT: 4,
+    IN_GAME_ITEMS: 8,
+    IN_GAME_NAME: 16,
+    ALL: 31,
 };
 /**
  * Reverses a numeric enum mapping.
